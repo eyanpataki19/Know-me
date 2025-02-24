@@ -1,5 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 export const HeroSection = () => {
   return <section className="min-h-screen relative flex items-center justify-center px-6 overflow-hidden">
       <div className="absolute inset-0 bg-[#0D0B1F]">
@@ -21,14 +22,22 @@ export const HeroSection = () => {
             Branding Expert & Copywriter
           </span>
         </div>
-        <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+        <h2 className="text-lg md:text-xl text-gray-400 mb-6 max-w-2xl mx-auto">
           Crafting compelling brand stories and converting copy that resonates
           with your audience and drives results.
+        </h2>
+        <p className="text-base md:text-lg text-gray-300 mb-12 max-w-2xl mx-auto">
+          Discover your brand's true potential with my free Brand Strategy
+          Playbook Test. A proven framework I've developed to help startups
+          create memorable brands that connect with their audience and drive
+          growth.
         </p>
-        <button className="group flex items-center gap-2 text-lg font-medium mx-auto bg-gradient-to-r from-purple-500 to-cyan-500 px-8 py-3 rounded-full hover:scale-105 transition-all duration-300">
-          View My Work
-          <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
-        </button>
+        <Link to="/test-book">
+          <button className="group flex items-center gap-2 text-lg font-medium mx-auto bg-gradient-to-r from-purple-500 to-cyan-500 px-8 py-3 rounded-full hover:scale-105 transition-all duration-300">
+            Take Test
+            <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+          </button>
+        </Link>
       </div>
     </section>;
 };
